@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "No Shit!",
+  "description": "Block shit things on internet",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["noshit.js"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ]
+}
