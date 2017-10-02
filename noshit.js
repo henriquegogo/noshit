@@ -1,20 +1,9 @@
 var selectors = [];
-//var attempts = 0;
-//var scroll_timeout = null;
 
 selectors.push('#ad', '.ad', '#teadsusersync ~ div'); 
 selectors.push('[id^=pagelet_].pagelet'); // Facebook Ads
-/*
-selectors.push('[id^=ads_]', '[id^=ads-]', '[id^=ad_]', '[id^=ad-]',);
-selectors.push('[id$=_ads]', '[id$=-ads]', '[id$=_ad]', '[id$=-ad]');
-selectors.push('[class^=ads_]', '[class^=ads-]', '[class^=ad_]', '[class^=ad-]');
-selectors.push('[class$=_ads]', '[class$=-ads]', '[class$=_ad]', '[class$=-ad]');
-*/
 
-[/*'_ads_', '-ads-', '_ad_', '-ad-',
- ' ads_', ' ads-', ' ad_', ' ad-',
- '_ads ', '-ads ', '_ad ', '-ad ',*/
- 'patrocin', 'sponsor', 'publici', 'promoted', 'promovido', 'paywall',
+['patrocin', 'sponsor', 'publici', 'promoted', 'promovido', 'paywall',
  'shopping', 'advertis', 'dynad', 'aswift', 'adzerk', 'adcriteo',
  'cto_iframe', 'carbonads', 'teads', 'taboola', 'outbrain', '_OAS_',
  'abrAD_', 'google_ads', 'aep-ads']
@@ -29,7 +18,6 @@ var not = ':not([id$=-ad-list]):not(.html5-video-player):not([class$=-has-ads])'
 
 // Hide Selectors
 function hide_selectors() {
-  //console.log('No Shit!');
   document.querySelectorAll('body, object').forEach(item => {
     var body = item.contentWindow ? item.contentWindow.document.body : item;
     selectors.forEach(selector => {
@@ -44,19 +32,7 @@ function hide_selectors() {
   });
 };
 
-var tryToFind = setInterval(function() {
-  hide_selectors();
-  //attempts++;
-  //if (attempts > 5) { clearInterval(tryToFind); attempts = 0; } 
-}, 1000);
-
-// Call hide selectors function
-/*
-window.addEventListener('scroll', function() {
-  clearTimeout(scroll_timeout);
-  scroll_timeout = setTimeout(hide_selectors, 500);
-});
-*/
+setInterval(hide_selectors, 1000);
 
 // Some injected hacks
 var script = document.createElement('script');
