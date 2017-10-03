@@ -1,6 +1,6 @@
 var selectors = [];
 
-selectors.push('#ad', '.ad', '#teadsusersync ~ div');
+selectors.push('#ad', '.ad', '.ads-ad', '#teadsusersync ~ div');
 selectors.push('#masthead-ad', '.video-ads', '#player-ads'); // YouTube Ads
 selectors.push('[id^=pagelet_].pagelet'); // Facebook Ads
 
