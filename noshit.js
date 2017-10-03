@@ -1,6 +1,6 @@
 var selectors = [];
 
-selectors.push('#ad', '.ad', '#teadsusersync ~ div', '#masthead-ad'); 
+selectors.push('#ad', '.ad', '#teadsusersync ~ div', '#masthead-ad', '.video-ads'); 
 selectors.push('[id^=pagelet_].pagelet'); // Facebook Ads
 
 ['patrocin', 'sponsor', 'publici', 'promoted', 'promovido', 'paywall',
