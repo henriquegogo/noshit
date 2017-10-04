@@ -7,7 +7,7 @@ selectors.push('[id^=pagelet_].pagelet'); // Facebook Ads
 ['patrocin', 'sponsor', 'publici', 'promoted', 'promovido', 'paywall',
  'shopping', 'advertis', 'dynad', 'aswift', 'adzerk', 'adcriteo',
  'cto_iframe', 'carbonads', 'teads', 'taboola', 'outbrain', '_OAS_',
- 'abrAD_', 'google_ads', 'aep-ads']
+ 'abrAD_', 'google_ads', 'aep-ads', 'adplugg']
 .forEach(word => {
   selectors.push('iframe[src*="'+word+'"]');
   selectors.push('[id*="'+word+'"]');
