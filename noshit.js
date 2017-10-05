@@ -7,15 +7,18 @@ selectors.push('[id^=pagelet_].pagelet'); // Facebook Ads
 ['patrocin', 'sponsor', 'publici', 'promoted', 'promovido', 'paywall',
  'shopping', 'advertis', 'dynad', 'aswift', 'adzerk', 'adcriteo',
  'cto_iframe', 'carbonads', 'teads', 'taboola', 'outbrain', '_OAS_',
- 'abrAD_', 'google_ads', 'aep-ads', 'adplugg', 'gwd-ad']
+ 'abrAD_', 'google_ads', 'aep-ads', 'adplugg', 'gwd-ad', 'doubleclick',
+ 'googleads', 'googlesyndication']
 .forEach(word => {
   selectors.push('iframe[src*="'+word+'"]');
+  selectors.push('a[href*="'+word+'"]');
+  selectors.push('img[src*="'+word+'"]');
   selectors.push('[id*="'+word+'"]');
   selectors.push('[class*="'+word+'"]');
 });
 
-// Exceptions: OLX, YouTube, Spotify
-var not = ':not([id$=-ad-list]):not(.html5-video-player):not([class$=-has-ads])';
+// Exceptions
+var not = ':not(.node-promoted)';
 
 // Hide Selectors
 function hide_selectors() {
