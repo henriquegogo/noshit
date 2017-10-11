@@ -45,10 +45,11 @@ script.id = 'noshit';
 if (location.host == 'www.facebook.com') {
   script.textContent += "\
     setInterval(function() { \
-      document.querySelectorAll('h5 .fcg, a').forEach(element => { \
-        if (element.innerText.includes('Sponsored') || element.innerText.includes('shared') || element.innerText.includes('liked') || element.innerText.includes('reacted') || element.innerText.includes('commented') || element.innerText.includes('replied') || element.innerText.includes('tagged') || element.innerText.includes('going to') || element.innerText.includes('interested')) { \
-          element.closest('[data-timestamp]').style.display = 'none' } \
-        }) \
+      document.querySelectorAll('h5 .fcg, a, .fwb').forEach(element => { \
+        if (element.innerText.includes('Sponsored') || element.innerText.includes('shared') || element.innerText.includes('liked') || element.innerText.includes('likes') || element.innerText.includes('reacted') || element.innerText.includes('commented') || element.innerText.includes('replied') || element.innerText.includes('tagged') || element.innerText.includes('going to') || element.innerText.includes('interested') || element.innerText.includes('People You May Know')) { \
+          element.closest('[data-timestamp]').style.display = 'none'; \
+        } \
+      }) \
     }, 1000);";
 }
 if (location.host.endsWith('infomoney.com.br')) { script.textContent += 'const unload = false;' }
