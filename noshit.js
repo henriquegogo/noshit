@@ -9,7 +9,7 @@ selectors.push('[id^=pagelet_].pagelet'); // Facebook Ads
  'cto_iframe', 'carbonads', 'teads', 'taboola', 'outbrain', '_OAS_',
  'abrAD_', 'google_ads', 'aep-ads', 'adplugg', 'gwd-ad', 'doubleclick',
  'googleads', 'googlesyndication', 'ad_container', 'ad-container',
- 'gpt-ad']
+ 'gpt-ad', 'anunci']
 .forEach(word => {
   selectors.push('iframe[src*="'+word+'"]');
   selectors.push('a[href*="'+word+'"]');
