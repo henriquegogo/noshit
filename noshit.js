@@ -45,8 +45,8 @@ script.id = 'noshit';
 if (location.host == 'www.facebook.com') {
   script.textContent += "\
     setInterval(function() { \
-      document.querySelectorAll('h5 .fcg, a, .fwb').forEach(element => { \
-        if (element.innerText.includes('Sponsored') || element.innerText.includes('Suggested') || element.innerText.includes('shared') || element.innerText.includes('liked') || element.innerText.includes('likes') || element.innerText.includes('reacted') || element.innerText.includes('commented') || element.innerText.includes('replied') || element.innerText.includes('tagged') || element.innerText.includes('going to') || element.innerText.includes('interested') || element.innerText.includes('now friends') || element.innerText.includes('People You May Know')) { \
+      document.querySelectorAll('h5 .fcg, a, .fwb, .PageLikeButton').forEach(element => { \
+        if (element.innerText.includes('Sponsored') || element.innerText.includes('Suggested') || element.innerText.includes('shared') || element.innerText.includes('liked') || element.innerText.includes('likes') || element.innerText.includes('reacted') || element.innerText.includes('commented') || element.innerText.includes('replied') || element.innerText.includes('tagged') || element.innerText.includes('going to') || element.innerText.includes('interested') || element.innerText.includes('now friends') || element.innerText.includes('People You May Know') || element.innerText.includes('Like Page') || element.innerText.includes('Follow')) { \
           var elementContainer = element.closest('[data-timestamp]'); \
           if (elementContainer) elementContainer.style.display = 'none'; \
         } \
